@@ -46,9 +46,9 @@ export const getMessages= async(req,res)=>{
         if(!conversation){
             res.status(200).json([])
         }
-
+        else{
         const messages = conversation.messages
-        res.status(200).json(messages)
+        res.status(200).json(messages)}
     } catch (error) {
         console.log(error.message)
         res.status(500).json({error:"Internal server error"})
